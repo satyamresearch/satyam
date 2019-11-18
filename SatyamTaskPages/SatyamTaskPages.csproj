@@ -1,0 +1,482 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10CC061D-F06E-4E97-B16D-09F02E55FC00}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SatyamTaskPages</RootNamespace>
+    <AssemblyName>SatyamTaskPages</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\SatyamResearchTaskPages - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SatyamResearchTaskPages - Web Deploy1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AllJobsDone.aspx" />
+    <Content Include="CategoryExamplesPageForDemo.aspx" />
+    <Content Include="ImageSegmentation.aspx" />
+    <Content Include="ImageSegmentation_MTurk.aspx" />
+    <Content Include="Images\4-cats-on-tree-fb-cover.jpg" />
+    <Content Include="Images\cat1.jpg" />
+    <Content Include="Images\cat2.jpg" />
+    <Content Include="Images\cat2_proc.jpg" />
+    <Content Include="Images\DetectionExample.jpg" />
+    <Content Include="Images\bus1.png" />
+    <Content Include="Images\bus2.png" />
+    <Content Include="Images\bus3.png" />
+    <Content Include="Images\bus4.png" />
+    <Content Include="Images\car1.png" />
+    <Content Include="Images\car2.png" />
+    <Content Include="Images\car3.png" />
+    <Content Include="Images\car4.png" />
+    <Content Include="Images\cross.jpg" />
+    <Content Include="Images\cross.jpg.png" />
+    <Content Include="Images\dog2.JPG" />
+    <Content Include="Images\FirstPoly.jpg" />
+    <Content Include="Images\SecondPoly.jpg" />
+    <Content Include="Images\segmentationGoodWork.PNG" />
+    <Content Include="Images\tight-bad.jpg" />
+    <Content Include="Images\tight-good.jpg" />
+    <Content Include="image\goodwork.jpg" />
+    <Content Include="image\step1.jpg" />
+    <Content Include="image\step2.jpg" />
+    <Content Include="image\step2_ill.jpg" />
+    <Content Include="image\step3.jpg" />
+    <Content Include="image\step3_ill.jpg" />
+    <Content Include="image\step4.jpg" />
+    <Content Include="image\step4_ill.jpg" />
+    <Content Include="image\stepx.jpg" />
+    <Content Include="image\stepy.jpg" />
+    <Content Include="image\stepz.jpg" />
+    <Content Include="image\test-image.jpg" />
+    <Content Include="image\tight-bad.jpg" />
+    <Content Include="image\turker.mp4" />
+    <Content Include="jquery-ui-1.11.4.custom\external\jquery\jquery.js" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery-ui-1.11.4.custom\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.11.4.custom\index.html" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.css" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.js" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.min.css" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.min.js" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.structure.css" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.structure.min.css" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.theme.css" />
+    <Content Include="jquery-ui-1.11.4.custom\jquery-ui.theme.min.css" />
+    <Content Include="JQueryScripts\CamPoseEstimation\AxisDrawer.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\BoundaryDrawer2.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\BoundaryDrawer3.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\instructions_VATIC_DVA8.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\LoadingScreen_VATIC_DVA4.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\Polygon.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\startSegmentation.js" />
+    <Content Include="JQueryScripts\CamPoseEstimation\stylesheet5.css" />
+    <Content Include="JQueryScripts\CamPoseEstimation\ui_VATIC_DVA27.js" />
+    <Content Include="JQueryScripts\ImageSegmentation\BoundaryDrawer3.js" />
+    <Content Include="JQueryScripts\ImageSegmentation\BoundaryDrawer2.js" />
+    <Content Include="JQueryScripts\ImageSegmentation\Polygon.js" />
+    <Content Include="JQueryScripts\ImageSegmentation\startSegmentation.js" />
+    <Content Include="JQueryScripts\ImageSegmentation_NoHoles\BoundaryDrawer2.js" />
+    <Content Include="JQueryScripts\ImageSegmentation_NoHoles\BoundaryDrawer.js" />
+    <Content Include="JQueryScripts\ImageSegmentation_NoHoles\MultiBoundaryDrawer.js" />
+    <Content Include="JQueryScripts\ImageSegmentation_NoHoles\startSegmentation.js" />
+    <Content Include="JQueryScripts\LocalizationAndLabeling\BoxDrawer.css" />
+    <Content Include="JQueryScripts\LocalizationAndLabeling\BoxDrawer2.js" />
+    <Content Include="JQueryScripts\LocalizationAndLabeling\DrawRegions2.js" />
+    <Content Include="JQueryScripts\LocalizationAndLabeling\OnStartRevisionTask.js" />
+    <Content Include="JQueryScripts\LocalizationAndLabeling\OnStart5.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\DateTime.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\DrawRegions7.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\GetElementPosition.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\classify.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\entering1.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\entering2.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\entering3.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\entering4.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\outofcar1.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\outofcar2.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\outofcar3.png" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\outsideoccluded.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\sequence1.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\sequence2.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\sequence3.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\sequence4.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\tight-bad.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Images\tight-good.jpg" />
+    <Content Include="JQueryScripts\MultiObjectTracking\instructions_VATIC_DVA8.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\job_VATIC_DVA9.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\LoadingScreen_VATIC_DVA4.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\MTurkParams1.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Music\magic.mp3" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Music\nutcrackershort.mp3" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Music\small_step.mp3" />
+    <Content Include="JQueryScripts\MultiObjectTracking\objectui_VATIC_DVA9.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\PreAcceptanceScreen_VATIC_DVA2.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\PreLoadingScreen_VATIC_DVA4.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\preload_VATIC_DVA.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Startup3.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\Startup8.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\stylesheet5.css" />
+    <Content Include="JQueryScripts\MultiObjectTracking\ThankYouPage1.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\tracks_VATIC_DVA12.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\ui_VATIC_DVA27.js" />
+    <Content Include="JQueryScripts\MultiObjectTracking\videoplayer_VATIC_DVA1.js" />
+    <Content Include="JQueryScripts\demoVideo.mp4" />
+    <Content Include="JQueryScripts\SingleObjectCountingInVideo\StartUp1.js" />
+    <Content Include="JQueryScripts\SingleObjectLabelingInVideo\StartUp1.js" />
+    <Content Include="JQueryScripts\SingleObjectLabelingInVideo\StartUp.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\DateTime.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\DrawRegions7.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\GetElementPosition.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\instructions_VATIC_DVA8.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\job_VATIC_DVA9.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\LoadingScreen_VATIC_DVA4.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\MTurkParams1.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\objectui_VATIC_DVA10.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\objectui_VATIC_DVA9.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\PreAcceptanceScreen_VATIC_DVA2.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\PreLoadingScreen_VATIC_DVA4.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\preload_VATIC_DVA.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\Startup8.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\stylesheet5.css" />
+    <Content Include="JQueryScripts\TrackletLabeling\ThankYouPage1.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\tracks_VATIC_DVA12.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\ui_VATIC_DVA27.js" />
+    <Content Include="JQueryScripts\TrackletLabeling\videoplayer_VATIC_DVA1.js" />
+    <Content Include="MTurkTaskDonePage.aspx" />
+    <Content Include="MultiObjectDetectionRevisionTask.aspx" />
+    <Content Include="MultiObjectDetectionRevisionTaskMTurk.aspx" />
+    <Content Include="MultiObjectLocalizationAndLabeling.aspx" />
+    <Content Include="MultiObjectLocalizationAndLabelingMTurk.aspx" />
+    <Content Include="MultiObjectTracking.aspx" />
+    <Content Include="MultiObjectTrackingMTurk.aspx" />
+    <Content Include="ObjectCountingInImage.aspx" />
+    <Content Include="ObjectCountingInImageMTurk.aspx" />
+    <Content Include="ObjectCountingInVideo.aspx" />
+    <Content Include="ObjectCountingInVideoMTurk.aspx" />
+    <Content Include="SingleObjectLabeling.aspx" />
+    <Content Include="SingleObjectLabelingInVideo.aspx" />
+    <Content Include="SingleObjectLabelingInVideoMTurk.aspx" />
+    <Content Include="SingleObjectLabelingMTurk.aspx" />
+    <Content Include="TrackletLabeling_MTurk.aspx" />
+    <Content Include="TrackletLabeling.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllJobsDone.aspx.cs">
+      <DependentUpon>AllJobsDone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllJobsDone.aspx.designer.cs">
+      <DependentUpon>AllJobsDone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryExamplesPageForDemo.aspx.cs">
+      <DependentUpon>CategoryExamplesPageForDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryExamplesPageForDemo.aspx.designer.cs">
+      <DependentUpon>CategoryExamplesPageForDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSegmentation.aspx.cs">
+      <DependentUpon>ImageSegmentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageSegmentation.aspx.designer.cs">
+      <DependentUpon>ImageSegmentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSegmentation_MTurk.aspx.cs">
+      <DependentUpon>ImageSegmentation_MTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageSegmentation_MTurk.aspx.designer.cs">
+      <DependentUpon>ImageSegmentation_MTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MTurkTaskDonePage.aspx.cs">
+      <DependentUpon>MTurkTaskDonePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MTurkTaskDonePage.aspx.designer.cs">
+      <DependentUpon>MTurkTaskDonePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectDetectionRevisionTask.aspx.cs">
+      <DependentUpon>MultiObjectDetectionRevisionTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectDetectionRevisionTask.aspx.designer.cs">
+      <DependentUpon>MultiObjectDetectionRevisionTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectDetectionRevisionTaskMTurk.aspx.cs">
+      <DependentUpon>MultiObjectDetectionRevisionTaskMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectDetectionRevisionTaskMTurk.aspx.designer.cs">
+      <DependentUpon>MultiObjectDetectionRevisionTaskMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectLocalizationAndLabeling.aspx.cs">
+      <DependentUpon>MultiObjectLocalizationAndLabeling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectLocalizationAndLabeling.aspx.designer.cs">
+      <DependentUpon>MultiObjectLocalizationAndLabeling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectLocalizationAndLabelingMTurk.aspx.cs">
+      <DependentUpon>MultiObjectLocalizationAndLabelingMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectLocalizationAndLabelingMTurk.aspx.designer.cs">
+      <DependentUpon>MultiObjectLocalizationAndLabelingMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectTracking.aspx.cs">
+      <DependentUpon>MultiObjectTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectTracking.aspx.designer.cs">
+      <DependentUpon>MultiObjectTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiObjectTrackingMTurk.aspx.cs">
+      <DependentUpon>MultiObjectTrackingMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiObjectTrackingMTurk.aspx.designer.cs">
+      <DependentUpon>MultiObjectTrackingMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectCountingInImage.aspx.cs">
+      <DependentUpon>ObjectCountingInImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObjectCountingInImage.aspx.designer.cs">
+      <DependentUpon>ObjectCountingInImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectCountingInImageMTurk.aspx.cs">
+      <DependentUpon>ObjectCountingInImageMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObjectCountingInImageMTurk.aspx.designer.cs">
+      <DependentUpon>ObjectCountingInImageMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectCountingInVideo.aspx.cs">
+      <DependentUpon>ObjectCountingInVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObjectCountingInVideo.aspx.designer.cs">
+      <DependentUpon>ObjectCountingInVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectCountingInVideoMTurk.aspx.cs">
+      <DependentUpon>ObjectCountingInVideoMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObjectCountingInVideoMTurk.aspx.designer.cs">
+      <DependentUpon>ObjectCountingInVideoMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleObjectLabeling.aspx.cs">
+      <DependentUpon>SingleObjectLabeling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleObjectLabeling.aspx.designer.cs">
+      <DependentUpon>SingleObjectLabeling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleObjectLabelingInVideo.aspx.cs">
+      <DependentUpon>SingleObjectLabelingInVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleObjectLabelingInVideo.aspx.designer.cs">
+      <DependentUpon>SingleObjectLabelingInVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleObjectLabelingInVideoMTurk.aspx.cs">
+      <DependentUpon>SingleObjectLabelingInVideoMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleObjectLabelingInVideoMTurk.aspx.designer.cs">
+      <DependentUpon>SingleObjectLabelingInVideoMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleObjectLabelingMTurk.aspx.cs">
+      <DependentUpon>SingleObjectLabelingMTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleObjectLabelingMTurk.aspx.designer.cs">
+      <DependentUpon>SingleObjectLabelingMTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackletLabeling_MTurk.aspx.cs">
+      <DependentUpon>TrackletLabeling_MTurk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackletLabeling_MTurk.aspx.designer.cs">
+      <DependentUpon>TrackletLabeling_MTurk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackletLabeling.aspx.cs">
+      <DependentUpon>TrackletLabeling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackletLabeling.aspx.designer.cs">
+      <DependentUpon>TrackletLabeling.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JQueryScripts\General\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AmazonMechanicalTurkAPI\AmazonMechanicalTurkAPI.csproj">
+      <Project>{71f159d9-6f44-4610-a8e2-f20dfde3a0f5}</Project>
+      <Name>AmazonMechanicalTurkAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AzureBlobStorage\AzureBlobStorage.csproj">
+      <Project>{051836F7-DA19-46B1-8B55-64F51572684A}</Project>
+      <Name>AzureBlobStorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{935f7806-8e78-4c03-9c86-1cfdf570fe43}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperClasses\HelperClasses.csproj">
+      <Project>{63f0c223-2646-4a8b-8ca4-da23e67e5db1}</Project>
+      <Name>HelperClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobTemplateClasses\JobTemplateClasses.csproj">
+      <Project>{db7f86ec-c228-41cb-a0e2-01323880f899}</Project>
+      <Name>JobTemplateClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamResultAggregators\SatyamResultAggregators.csproj">
+      <Project>{A5417298-6310-4923-8289-A0EF2C0B46FC}</Project>
+      <Name>SatyamResultAggregators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamResultClasses\SatyamResultClasses.csproj">
+      <Project>{548d9225-326f-4295-ac23-1354fdad0162}</Project>
+      <Name>SatyamResultClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamTaskGenerators\SatyamTaskGenerators.csproj">
+      <Project>{cf579246-b1f0-4eff-ae3f-03a607d89fbb}</Project>
+      <Name>SatyamTaskGenerators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLTableManagement\SQLTableManagement.csproj">
+      <Project>{CA1976D6-8F83-4790-8371-8911F92B60E7}</Project>
+      <Name>SQLTableManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLTables\SQLTables.csproj">
+      <Project>{fecfc2e9-1470-4ee4-a83e-7b3444a06c3a}</Project>
+      <Name>SQLTables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TFServingClient\TFServingClient.csproj">
+      <Project>{0266A724-04F5-4AD8-B21F-15F19797D3FF}</Project>
+      <Name>TFServingClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{d2d8ccfa-143f-4230-b342-122e5b124302}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3264</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3264/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

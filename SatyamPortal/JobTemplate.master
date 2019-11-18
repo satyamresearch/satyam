@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MainPage.Master" AutoEventWireup="true" CodeBehind="JobTemplate.master.cs" Inherits="SatyamPortal.JobTemplate" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="TemplateMasterContent" ContentPlaceHolderID="MainTemplatePlaceHolder" runat="server">
+    <h2>Launch New Job</h2>
+        <table>
+            <tr>
+                <td> <strong>Select Template :</strong> </td>
+                <td>
+                     <asp:DropDownList ID="TemplatesDropDownList" runat="server" OnSelectedIndexChanged="TemplatesDropDownList_SelectedIndexChanged" AutoPostBack="True">
+                            <asp:ListItem>Single Object Labeling In Image</asp:ListItem>
+                            <asp:ListItem>Single Object Labeling In Video</asp:ListItem>
+                            <asp:ListItem>Object Counting In Image</asp:ListItem>
+                            <asp:ListItem>Object Counting In Video</asp:ListItem>
+                            <asp:ListItem>Multi-Object Localization and Labeling</asp:ListItem>
+                            <asp:ListItem>Multi-Object Tracking</asp:ListItem>
+                            <asp:ListItem>Tracklet Labeling</asp:ListItem>
+                            <asp:ListItem>Image Segmentation</asp:ListItem>
+                            <asp:ListItem>Open-ended Questions for Image</asp:ListItem>
+                            <asp:ListItem>Camera Pose Estimation</asp:ListItem>
+                      </asp:DropDownList>
+                 </td>
+            </tr>
+        </table>     
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>

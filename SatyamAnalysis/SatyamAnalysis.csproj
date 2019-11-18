@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{354FF4FF-1542-46B4-AE98-4BB68002EF6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SatyamAnalysis</RootNamespace>
+    <AssemblyName>SatyamAnalysis</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraPoseAnnotationAnalyzer.cs" />
+    <Compile Include="ImageSegmentationResultAnalysis.cs" />
+    <Compile Include="MiscTaskAnalyzer.cs" />
+    <Compile Include="MultiObjectLablingAndLocalizationAnalysis.cs" />
+    <Compile Include="MultiObjectTrackingAnalyzer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatyamResultsAnalysis.cs" />
+    <Compile Include="TrackletLabelingAnalyzer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzureBlobStorage\AzureBlobStorage.csproj">
+      <Project>{051836F7-DA19-46B1-8B55-64F51572684A}</Project>
+      <Name>AzureBlobStorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{935F7806-8E78-4C03-9C86-1CFDF570FE43}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperClasses\HelperClasses.csproj">
+      <Project>{63f0c223-2646-4a8b-8ca4-da23e67e5db1}</Project>
+      <Name>HelperClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JobTemplateClasses\JobTemplateClasses.csproj">
+      <Project>{db7f86ec-c228-41cb-a0e2-01323880f899}</Project>
+      <Name>JobTemplateClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamResultAggregators\SatyamResultAggregators.csproj">
+      <Project>{a5417298-6310-4923-8289-a0ef2c0b46fc}</Project>
+      <Name>SatyamResultAggregators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamResultClasses\SatyamResultClasses.csproj">
+      <Project>{548d9225-326f-4295-ac23-1354fdad0162}</Project>
+      <Name>SatyamResultClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamResultSaving\SatyamResultSaving.csproj">
+      <Project>{b7f8d7c6-226b-4a69-95d1-82e9aabeaeaa}</Project>
+      <Name>SatyamResultSaving</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SatyamTaskGenerators\SatyamTaskGenerators.csproj">
+      <Project>{cf579246-b1f0-4eff-ae3f-03a607d89fbb}</Project>
+      <Name>SatyamTaskGenerators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLTables\SQLTables.csproj">
+      <Project>{fecfc2e9-1470-4ee4-a83e-7b3444a06c3a}</Project>
+      <Name>SQLTables</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsefulAlgorithms\UsefulAlgorithms.csproj">
+      <Project>{7C8D442F-DE16-4479-A27F-33C44D690DA1}</Project>
+      <Name>UsefulAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{d2d8ccfa-143f-4230-b342-122e5b124302}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

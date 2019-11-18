@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="SatyamPortal.MainPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 187px;
+        }
+        .auto-style2 {
+            width: 178px;
+        }
+        .auto-style4 {
+            width: 133px;
+        }
+        .auto-style5 {
+            width: 160px;
+        }
+    </style>  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="/resources/demos/style.css"/>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src ="JavaScripts/Template_Checks.js "></script> 
+</head>
+<body>
+    <form id="MainPage" runat="server">
+        <div id="TopHeader">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Satyam : Ground Truth For Machine Learning Tasks Made Easy</h1> 
+                    </td>
+                    <%--<td>
+                        <asp:Panel ID="SignInPanel" runat="server">
+                            <a href="www.google.com">Sign In using MS Account</a>
+                        </asp:Panel>                        
+                     </td>--%>
+                    </tr>
+                <tr><td>
+
+                    <asp:Panel ID="MenuPanel" runat="server">
+                        <table>
+                            <tr>
+                                <td class="auto-style1">
+                                    <a href="JobStatusPage.aspx">Check Job Status</a>
+                                </td>
+                                <td class="auto-style2">
+                                    <a href="Template_SingleObjectLabeling.aspx">Launch New Job</a>
+                                </td>                                
+                                <td class="auto-style5" >
+                                    <a href="LandingPage.aspx">Information</a>
+                                </td>
+                                <td>
+                                    Welcome 
+                                    <asp:Label ID="UsernameLabel" runat="server" Text="username"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+
+                </td></tr>
+            </table>
+            <asp:ContentPlaceHolder ID="MainTemplatePlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
